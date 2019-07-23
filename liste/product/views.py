@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
+from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
 from .models import Product
@@ -27,3 +28,8 @@ class ProductDelete(DeleteView):
 
     model = Product
     success_url = reverse_lazy('product:product_list')
+
+class ProductList(ListView):
+
+    model = Product
+    paginate_by = 100
