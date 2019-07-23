@@ -1,3 +1,6 @@
 .idea/
 env/
 liste/liste/__pycache__/
+db.sqlite3
+liste/product/__pycache__/
+liste/product/migrations/__pycache__/
